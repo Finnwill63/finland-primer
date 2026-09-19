@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<!-- ═══════════════════════════════════════════════════════════════
+     TIME-WINDOW ADD-ON — TEMPLATE
+
+     Copy to a dated filename (e.g. 2026-11-11.html) and fill in.
+     Everything here is window-specific; anything that will still be
+     true in three years belongs in the evergreen guide instead.
+
+     WINDOW:    [dates]
+     AUDIENCE:  [students / professionals / both]
+     PURPOSE:   [one line]
+     BUILT:     [date] — re-verify every item before the window opens
+     ═══════════════════════════════════════════════════════════════ -->
+<title>[Window] Add-On</title>
+<meta name="description" content="Window-specific supplement to the Finland guide for [dates].">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<!-- Set class to "stu" or "pro" to match the guide this layers onto -->
+<body class="pro">
+
+<header class="hero hero-compact">
+  <a class="hero-back" href="../professionals.html">← Back to the guide</a>
+  <div class="hero-tag">Add-on · [Dates]</div>
+  <h1>[Window <em>Name</em>]</h1>
+  <p class="hero-sub">[One sentence on what this window is and who it's for. Everything below is true only for these dates — the guide underneath stays evergreen.]</p>
+</header>
+
+<section class="prose">
+  <p>[Optional opener. What is different about this particular week, in two or three sentences. If there is one thing a visitor must know that isn't in the main guide, say it here.]</p>
+</section>
+
+<div class="content-grid" style="padding-top:28px;">
+
+  <!-- ── CONDITIONS ─────────────────────────────────────────── -->
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">🌡</span>Conditions That Week</div>
+    <div class="fact-row"><span class="fact-label">Sunrise</span><span class="fact-val num">[hh:mm]</span></div>
+    <div class="fact-row"><span class="fact-label">Sunset</span><span class="fact-val num">[hh:mm]</span></div>
+    <div class="fact-row"><span class="fact-label">Daylight</span><span class="fact-val num">[Xh Ym]</span></div>
+    <div class="fact-row"><span class="fact-label">Typical high / low</span><span class="fact-val num">[X / Y °C]</span></div>
+    <div class="fact-row"><span class="fact-label">Snow / ice likely?</span><span class="fact-val">[yes / no / maybe]</span></div>
+    <div class="fact-row"><span class="fact-label">Daylight saving</span><span class="fact-val">[UTC+2 or +3]</span></div>
+    <p style="margin-top:12px;">[What to actually wear, in a sentence. Be concrete — "it will be dark before your last meeting ends" is more useful than a temperature.]</p>
+  </div>
+
+  <!-- ── WHAT'S ON ──────────────────────────────────────────── -->
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">📅</span>What's On</div>
+    <div class="seq">
+      <div class="seq-item">
+        <div class="seq-when">[Date]</div>
+        <div class="seq-what">[Event]</div>
+        <div class="seq-desc">[What it is, why it matters to this group, whether it affects transport or hotels.]</div>
+      </div>
+      <div class="seq-item">
+        <div class="seq-when">[Date]</div>
+        <div class="seq-what">[Event]</div>
+        <div class="seq-desc">[…]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── KNOCK-ON EFFECTS ───────────────────────────────────── -->
+  <div class="card span-2">
+    <div class="card-title"><span class="card-title-icon">⚠️</span>What This Window Changes</div>
+    <div class="alert alert-yellow">
+      <span class="alert-icon">🏨</span>
+      <div><strong>[Hotels / transport / availability].</strong> [Whether this week is unusually expensive or tight, and what to do about it.]</div>
+    </div>
+    <div class="alert alert-blue">
+      <span class="alert-icon">🚪</span>
+      <div><strong>[Closures or reduced hours].</strong> [Anything shut, on holiday hours, or under restoration during these dates.]</div>
+    </div>
+    <div class="alert alert-green">
+      <span class="alert-icon">🎯</span>
+      <div><strong>[The opportunity].</strong> [What is uniquely possible this week and not at other times — who is in town, what convenes, what you can only do now.]</div>
+    </div>
+  </div>
+
+  <!-- ── AGENDA (delete if not a specific group) ────────────── -->
+  <div class="card span-2">
+    <div class="card-title"><span class="card-title-icon">📋</span>The Schedule</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>When</th><th>What</th><th>Where</th><th>Getting there</th></tr></thead>
+        <tbody>
+          <tr><td class="num"><strong>[Day, time]</strong></td><td>[Item]</td><td>[Venue]</td><td>[Travel time and mode from base]</td></tr>
+          <tr><td class="num"><strong>[Day, time]</strong></td><td>[Item]</td><td>[Venue]</td><td>[…]</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── PEOPLE (delete if not a specific group) ────────────── -->
+  <div class="card span-2">
+    <div class="card-title"><span class="card-title-icon">🤝</span>Who You're Meeting</div>
+    <div class="entry">
+      <div class="entry-name">[Name]</div>
+      <div class="entry-meta">[Role] · [Organisation]</div>
+      <div class="entry-desc">[What they do, why they matter to this delegation, and the one question worth asking them. Keep it to what changes the conversation.]</div>
+    </div>
+  </div>
+
+  <!-- ── GAPS ───────────────────────────────────────────────── -->
+  <div class="card span-2">
+    <div class="card-title"><span class="card-title-icon">🕐</span>Filling the Gaps</div>
+    <p>[Specific suggestions for the free windows in this particular schedule — what's within walking distance of where they'll be, what's open at that hour, what fits the time they actually have.]</p>
+  </div>
+
+</div>
+
+<footer class="primer-footer">
+  <strong>Add-on · [Dates]</strong> · <a href="../professionals.html">Back to the evergreen guide</a><br>
+  <div class="footer-note">Everything on this page is specific to these dates and was verified on [date]. Events, hours and schedules move — re-check anything load-bearing before you rely on it.</div>
+</footer>
+
+</body>
+</html>
