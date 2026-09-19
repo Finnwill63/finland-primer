@@ -729,6 +729,86 @@ td strong { color: var(--dark); }
   color: var(--soft);
 }
 
+/* ── DAYLIGHT CHART ─────────────────────────────────── */
+/* Single series, so one hue and no legend — the caption names it.
+   The values also appear in the table beside it, so the tooltip
+   enhances rather than gates. */
+.chart {
+  --chart-ink: var(--fi-accent);
+  margin: 4px 0 2px;
+}
+.stu .chart { --chart-ink: var(--stu); }
+.daylight-wrap { position: relative; }
+.daylight-svg { width: 100%; height: auto; display: block; overflow: visible; }
+
+.daylight-grid  { stroke: var(--border); stroke-width: 1; }
+.daylight-line  { fill: none; stroke: var(--chart-ink); stroke-width: 2; stroke-linejoin: round; }
+.daylight-tick,
+.daylight-month { fill: var(--faint); font-size: 10px; font-variant-numeric: tabular-nums; }
+.daylight-month { letter-spacing: 0.06em; }
+
+.daylight-band      { fill: var(--chart-ink); opacity: 0.06; }
+.daylight-bandlabel { fill: var(--soft); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
+
+.daylight-window     { fill: var(--chart-ink); opacity: 0.16; }
+.daylight-dot        { fill: var(--chart-ink); stroke: var(--card-bg); stroke-width: 2; }
+.daylight-callout    { fill: var(--dark); font-size: 11px; font-weight: 700; letter-spacing: 0.04em; }
+.daylight-calloutsub { fill: var(--soft); font-size: 10px; font-variant-numeric: tabular-nums; }
+
+.daylight-extreme      { fill: var(--chart-ink); }
+.daylight-extremelabel { fill: var(--mid); font-size: 10px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.daylight-cross    { stroke: var(--faint); stroke-width: 1; pointer-events: none; transition: opacity 0.12s ease; }
+.daylight-hoverdot { fill: var(--chart-ink); stroke: var(--card-bg); stroke-width: 2; pointer-events: none; transition: opacity 0.12s ease; }
+
+.daylight-tip {
+  position: absolute;
+  top: -6px;
+  background: var(--dark);
+  color: white;
+  font-size: 11.5px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  font-variant-numeric: tabular-nums;
+}
+.chart-caption {
+  font-size: 12px;
+  color: var(--soft);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.chart-caption strong { color: var(--mid); }
+
+/* ── TRAVEL-TIME STRIP ──────────────────────────────── */
+/* A time scale rather than a map — minutes from Helsinki Central
+   is the thing you actually plan a day around. */
+.timestrip { margin: 6px 0 2px; }
+.timestrip-row {
+  display: grid;
+  grid-template-columns: 118px 1fr 56px;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 13px;
+}
+.timestrip-row:last-of-type { border-bottom: none; }
+.timestrip-name { font-weight: 600; color: var(--dark); line-height: 1.3; }
+.timestrip-name span { display: block; font-weight: 400; font-size: 11px; color: var(--soft); }
+.timestrip-track { position: relative; height: 8px; border-radius: 4px; background: var(--hairline); }
+.timestrip-fill  { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 4px; background: var(--fi-accent); opacity: 0.85; }
+.stu .timestrip-fill { background: var(--stu); }
+.timestrip-fill.far { opacity: 0.32; }
+.timestrip-val { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--mid); }
+.timestrip-note { font-size: 12px; color: var(--soft); margin-top: 12px; line-height: 1.55; }
+@media (max-width: 520px) {
+  .timestrip-row { grid-template-columns: 96px 1fr 48px; gap: 8px; font-size: 12px; }
+}
+
 /* ── FOOTER ─────────────────────────────────────────── */
 .primer-footer {
   background: var(--dark);

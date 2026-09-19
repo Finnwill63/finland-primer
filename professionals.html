@@ -146,7 +146,45 @@
         <li><span class="dot"></span><span><strong>Bolt for taxis.</strong> Cheaper than metered, card-based, and the app handles the Finnish addresses your pronunciation will not.</span></li>
         <li><span class="dot"></span><span><strong>Install the HSL app</strong> before you land. The journey planner tells you which zone ticket each trip needs.</span></li>
       </ul>
-      <p style="margin-top:12px;"><strong>Beyond Helsinki:</strong> Turku is ~2 hours by train, Tampere ~1.5 hours, Oulu about an hour by air. Each is a separate day, not an afternoon.</p>
+      <h4 style="margin-top:18px;">How far things actually are</h4>
+      <div class="timestrip">
+        <div class="timestrip-row">
+          <div class="timestrip-name">West Terminal 2<span>Tallinn ferries</span></div>
+          <div class="timestrip-track"><div class="timestrip-fill" style="width:16%"></div></div>
+          <div class="timestrip-val">8 min</div>
+        </div>
+        <div class="timestrip-row">
+          <div class="timestrip-name">Meilahti<span>hospital, health hub</span></div>
+          <div class="timestrip-track"><div class="timestrip-fill" style="width:20%"></div></div>
+          <div class="timestrip-val">10 min</div>
+        </div>
+        <div class="timestrip-row">
+          <div class="timestrip-name">Kumpula<span>LUMI AI Factory</span></div>
+          <div class="timestrip-track"><div class="timestrip-fill" style="width:30%"></div></div>
+          <div class="timestrip-val">15 min</div>
+        </div>
+        <div class="timestrip-row">
+          <div class="timestrip-name">Otaniemi<span>Aalto, VTT, A Grid</span></div>
+          <div class="timestrip-track"><div class="timestrip-fill" style="width:40%"></div></div>
+          <div class="timestrip-val">20 min</div>
+        </div>
+        <div class="timestrip-row">
+          <div class="timestrip-name">Viikki<span>Luke, life sciences</span></div>
+          <div class="timestrip-track"><div class="timestrip-fill" style="width:50%"></div></div>
+          <div class="timestrip-val">25 min</div>
+        </div>
+        <div class="timestrip-row">
+          <div class="timestrip-name">Airport<span>train I or P</span></div>
+          <div class="timestrip-track"><div class="timestrip-fill" style="width:54%"></div></div>
+          <div class="timestrip-val">27 min</div>
+        </div>
+        <div class="timestrip-row">
+          <div class="timestrip-name">Nuuksio<span>national park</span></div>
+          <div class="timestrip-track"><div class="timestrip-fill far" style="width:100%"></div></div>
+          <div class="timestrip-val">50 min</div>
+        </div>
+      </div>
+      <p class="timestrip-note"><strong>Minutes from Helsinki Central on public transport.</strong> Everything here is a normal transit ticket and fits inside a working day without a taxi — which is the single most useful fact when you are building an itinerary. Off this scale: <strong>Tallinn 2 h</strong> by ferry, <strong>Tampere ~1.5 h</strong> and <strong>Turku ~2 h</strong> by train, <strong>Oulu</strong> about an hour by air. Each of those is a separate day, not an afternoon.</p>
     </div>
 
     <div class="card" id="fi-eat">
@@ -306,6 +344,8 @@
     <div class="card span-2" id="fi-hours">
       <div class="card-title"><span class="card-title-icon">📅</span>The Finnish Business Calendar</div>
       <p>Timing a trip here badly can waste it entirely. Two months are effectively unusable for meetings, and neither is one an American would guess.</p>
+      <div class="chart" data-daylight>Daylight in Helsinki runs from 5h49m at the winter solstice to 18h56m at the summer solstice.</div>
+      <p class="chart-caption"><strong>Hours of daylight in Helsinki, across the year.</strong> Hover for any date. Worth checking before you agree to a date — a November afternoon meeting ends in the dark, and a June one ends in broad daylight at ten at night.</p>
       <div class="months" style="margin:16px 0;">
         <div class="mon mon-ok"><div class="mon-name">Jan</div><div class="mon-note">Good</div></div>
         <div class="mon mon-best"><div class="mon-name">Feb</div><div class="mon-note">Excellent</div></div>
@@ -1051,6 +1091,8 @@
   Professional track · <a href="students.html">Switch to the student guide</a> · <a href="index.html">Both tracks</a>
   <div class="footer-note">Ecosystem facts current as of September 2026 and flagged where they are contested or fast-moving. Business Finland's reorganisation, the Secondary Use Act reform, defence spending figures and Slush availability all have short shelf lives — verify named contacts and current programmes before a trip. The cultural guidance does not go stale.</div>
 </footer>
+
+<script src="charts.js"></script>
 
 <script>
 (function () {

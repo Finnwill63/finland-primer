@@ -9,6 +9,7 @@ index.html            Landing page — the choice, plus facts true for everyone
 students.html         Student track — Helsinki · Tallinn · Before You Go
 professionals.html    Professional track — Helsinki · Business Culture · Ecosystem · Tallinn · Before You Go
 style.css             Shared stylesheet (inherits the GIE Primer's visual system)
+charts.js             Daylight chart — renders into any element with data-daylight
 addons/               Time-window overlays — see addons/README.md
 ```
 
