@@ -82,7 +82,56 @@ a { color: inherit; }
   background: radial-gradient(ellipse at 30% 50%, rgba(0,85,168,0.30) 0%, transparent 60%),
               radial-gradient(ellipse at 70% 20%, rgba(0,106,167,0.20) 0%, transparent 50%);
 }
-.hero > * { position: relative; }
+.hero > * { position: relative; z-index: 2; }
+
+/* ── HERO PHOTOGRAPHY ───────────────────────────────── */
+/* Photos sit at the outer edges and dissolve into the navy toward the
+   centre, so the gradient still carries the text. Set the image with
+   an inline --img on each panel. */
+.hero-photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 42%;
+  z-index: 1;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.58;
+  pointer-events: none;
+}
+.hero-photo-l {
+  left: 0;
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, transparent 100%);
+          mask-image: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, transparent 100%);
+}
+.hero-photo-r {
+  right: 0;
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, transparent 100%);
+          mask-image: linear-gradient(to left, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, transparent 100%);
+}
+/* A navy wash over the photos keeps the whole band one colour and
+   guarantees the headline's contrast whatever the image underneath. */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(ellipse at 50% 50%, rgba(10,22,40,0.94) 0%, rgba(10,22,40,0.66) 48%, rgba(10,22,40,0.30) 100%);
+  pointer-events: none;
+}
+/* Phone: one photo, full width, further back — two panels at 400px is soup. */
+@media (max-width: 720px) {
+  .hero-photo { width: 100%; opacity: 0.34; -webkit-mask-image: none; mask-image: none; }
+  .hero-photo-r { display: none; }
+  .hero::after {
+    background: linear-gradient(180deg, rgba(10,22,40,0.86) 0%, rgba(10,22,40,0.72) 50%, rgba(10,22,40,0.88) 100%);
+  }
+}
+/* Browsers without mask support get clean panels rather than hard edges. */
+@supports not ((-webkit-mask-image: linear-gradient(#000, transparent)) or (mask-image: linear-gradient(#000, transparent))) {
+  .hero-photo { width: 34%; opacity: 0.3; }
+}
 .hero-tag {
   display: inline-block;
   font-size: 11px;
